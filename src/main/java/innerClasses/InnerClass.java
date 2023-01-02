@@ -14,5 +14,6 @@ public class InnerClass {
         System.out.println(maclaren.WheelSpeed(1000));
         maclaren.changeGear(2);
         System.out.println(maclaren.WheelSpeed(3000));
+        System.out.println("test changes");
     }
 }
