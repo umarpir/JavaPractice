@@ -1,7 +1,8 @@
 package main.java.innerClasses;
 
+import java.util.Scanner;
+
 public class InnerClass {
-<<<<<<< HEAD
         private static Scanner sc = new Scanner(System.in);
         private static Button btnPrint = new Button("print button");
     public static void main(String[] args) {
@@ -24,17 +25,10 @@ public class InnerClass {
             }
         });
 
-
         listen();
         //btnPrint.setListener(new Clicklisten());
 
-
-=======
-
-    public static void main(String[] args) {
->>>>>>> master
         Gearbox maclaren = new Gearbox(6);
-
 
         maclaren.operateClutch_(true);
         maclaren.changeGear(1);
@@ -44,8 +38,9 @@ public class InnerClass {
         System.out.println(maclaren.WheelSpeed(3000));
         System.out.println("test changes");
         System.out.println("test changes");
+
     }
-    private static void listen(){
+        private static void listen(){
 
         boolean quit =false;
         while (!quit){
