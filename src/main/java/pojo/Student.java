@@ -2,16 +2,17 @@ package main.java.pojo;
 
 public class Student {
     
-    String id;
+    int id;
     String name;
     String dateOfBirth;
     String classList;
-    
-    public Student(String id, String name, String dateOfBirth, String classList) {
-        this.id = id;
+    static int count = 1;
+    public Student(String name, String dateOfBirth, String classList) {
+        this.id = count;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.classList = classList;
+        count++;
     }
 
     @Override
