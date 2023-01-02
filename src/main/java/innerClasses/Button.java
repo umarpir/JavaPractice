@@ -20,6 +20,6 @@ public class Button {
     }
 
     public interface OnClickListener{
-        public void onClick(String title);
+        void onClick(String title);
     }
 }

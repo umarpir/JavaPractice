@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class InnerClass {
         private static Scanner sc = new Scanner(System.in);
-        private static Button btnPrint = new Button("print");
+        private static Button btnPrint = new Button("print button");
     public static void main(String[] args) {
 
-        class Clicklisten implements Button.OnClickListener{
+       /* class Clicklisten implements Button.OnClickListener{
             public Clicklisten() {
                 System.out.println("ive been attached");
             }
@@ -16,9 +16,18 @@ public class InnerClass {
             public void onClick( String title) {
                 System.out.println(title + "was clicked");
             }
-        }
+        }*/
 
-        btnPrint.setListener(new Clicklisten());
+        btnPrint.setListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(String title) {
+                System.out.println(title + " was clicked");
+            }
+        });
+
+
+        listen();
+        //btnPrint.setListener(new Clicklisten());
 
 
         Gearbox maclaren = new Gearbox(6);
@@ -30,5 +39,18 @@ public class InnerClass {
         System.out.println(maclaren.WheelSpeed(3000));
         System.out.println("test changes");
         System.out.println("test changes");
+    }
+    private static void listen(){
+
+        boolean quit =false;
+        while (!quit){
+            int choice = sc.nextInt();
+            sc.nextLine();
+            switch (choice){
+                case 0 -> quit = true;
+                case 1 -> btnPrint.onClick();
+            }
+
+        }
     }
 }
