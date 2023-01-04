@@ -1,19 +1,12 @@
 package main.java.interfaces;
 
-public class Main implements ITelephone{
+public class Main{
 
-    @Override
-    public void powerOn() {
-
+    public static void main(String[] args) {
+        ITelephone printlambda = (s) -> "printing lambda";
+        printThing(printlambda);
     }
-
-    @Override
-    public void dial() {
-
-    }
-
-    @Override
-    public boolean isOn() {
-        return false;
+    static void printThing(ITelephone thing){
+        thing.dial("!");
     }
 }

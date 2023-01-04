@@ -2,8 +2,8 @@ package main.java.interfaces;
 
 public interface ITelephone {
 
-    public void powerOn();
-    public void dial();
-    public boolean isOn();
+   /* public String powerOn();*/
+    String dial(String suffix);
+   /* public boolean isOn();*/
 
 }
